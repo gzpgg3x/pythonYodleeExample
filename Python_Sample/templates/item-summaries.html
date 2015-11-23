@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+	{% block body %}
+		<!-- Header and Nav -->
+		<div class="row">
+			<div class="large-3 columns">
+				<h1><img src="/static/img/logo-yodleeinteractive-transparent.png" /></h1>
+			</div>
+		</div>
+		<!-- End Header and Nav -->
+
+		<!-- Main Content Section -->
+		<!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
+		<div class="row">
+			<div class="large-9 push-3 columns">
+				<h3>Item Summaries</h3>
+
+				<br />
+				<br />
+
+				<form action="/item-summaries" method="post">
+					<div class="row">
+						<div class="large-12 columns">
+							<div class="row">
+								<div class="large-4 columns">
+									<label for="left-label" class="left inline">CoBrand Session Token</label>
+								</div>
+								<div class="large-8 columns">
+									<textarea class="cobsession_token" name="cobrand_session_token">{{ cobrand_session_token }}</textarea>
+								</div>
+							</div>
+
+							<br />
+
+							<br />
+
+							<div class="row">
+								<div class="large-4 columns">
+									<label for="left-label" class="left inline">User Session Token</label>
+								</div>
+								<div class="large-8 columns">
+									<textarea class="cobsession_token" name="user_session_token">{{ user_session_token }}</textarea>
+								</div>
+							</div>
+
+							<br />
+
+							<div class="row">
+								<div class="large-4 columns">
+									<button class="button tiny radius success" type="submit" name="itemsummaries">Send Data</button>
+								</div>
+							</div>
+
+							<hr>
+							
+							<br />
+
+							<div class="row">
+								<div class="large-12 columns">
+									<h5>Response JSON</h5>
+										<textarea class="response_json">{{ res_json }}</textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<!-- Nav Sidebar -->
+			<!-- This is source ordered to be pulled to the left on larger screens -->
+			<div class="large-3 pull-9 columns">
+				<ul class="side-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/cobrand-session-token">CoBrand Session Token</a></li>
+					<li><a href="/user-session-token">User Session Token</a></li>
+					<li><a href="/search-sites">Search Sites</a></li>
+					<li><a href="/site-login">Site Login Form</a></li>
+					<li><a href="/site-account">Site Account Management</a><li>
+					<li class="active"><a href="/item-summaries">Item Summaries</a></li>
+				</ul>
+			</div>
+		</div>
+	{% endblock %}
+</html>

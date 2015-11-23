@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+	{% block body %}
+		<!-- Header and Nav -->
+		<div class="row">
+			<div class="large-3 columns">
+				<h1><img src="/static/img/logo-yodleeinteractive-transparent.png" /></h1>
+			</div>
+		</div>
+		<!-- End Header and Nav -->
+
+		<!-- Main Content Section -->
+		<!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
+		<div class="row">
+			<div class="large-9 push-3 columns">
+				<h3>Python - Sample App</h3>
+
+				<p>Welcome the Python Sample App! Please use the navigation to the left to access the information you need. You will need to be logged into your account to provide the necessary details. Thank you for trying our sample app in Python!</p>
+			</div>
+
+			<!-- Nav Sidebar -->
+			<!-- This is source ordered to be pulled to the left on larger screens -->
+			<div class="large-3 pull-9 columns">
+				<ul class="side-nav">
+					<li class="active" ><a href="/">Home</a></li>
+					<li><a href="/cobrand-session-token">CoBrand Session Token</a></li>
+					<li><a href="/user-session-token">User Session Token</a></li>
+					<!-- <li><a href="/search-sites">Search Sites</a></li> -->
+					<li><a href="/site-login">Site Login Form</a></li>
+					<li><a href="/site-account">Site Account Management</a><li>
+					<li><a href="/item-summaries">Item Summaries</a></li>
+				</ul>
+			</div>
+		</div>
+
+	{% endblock %}
+</html>

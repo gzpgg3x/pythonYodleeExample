@@ -1,0 +1,346 @@
+{% extends 'base.html' %}
+
+	{% block body %}
+		<!-- Header and Nav -->
+		<div class="row">
+			<div class="large-3 columns">
+				<h1><img src="/static/img/logo-yodleeinteractive-transparent.png" /></h1>
+			</div>
+		</div>
+		<!-- End Header and Nav -->
+
+		<!-- Main Content Section -->
+		<!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
+		<div class="row">
+			<div class="large-9 push-3 columns">
+				<h3>Site Account Management (addSiteAccount)</h3>
+
+				<br />
+				<br />
+
+				<form action="/site-account" method="post">
+					<div class="row">
+						<div class="large-12 columns">
+							<div class="row">
+								<div class="large-4 columns">
+									<label for="left-label" class="left inline">CoBrand Session Token</label>
+								</div>
+								<div class="large-8 columns">
+									<textarea class="cobsession_token" name="cobrand_session_token">{{ cobrand_session_token }}</textarea>
+								</div>
+							</div>
+
+							<br />
+
+							<br />
+
+							<div class="row">
+								<div class="large-4 columns">
+									<label for="left-label" class="left inline">User Session Token</label>
+								</div>
+								<div class="large-8 columns">
+									<textarea class="cobsession_token" name="user_session_token">{{ user_session_token }}</textarea>
+								</div>
+							</div>
+
+							<br />
+
+							<br />
+
+							<div class="row">
+								<div class="large-4 columns">
+									<label for="left-label" class="left inline">Site ID</label>
+								</div>
+								<div class="large-8 columns">
+									<input type="text" id="left-label" name="site_id" placeholder="{{ site_id }}">
+								</div>
+							</div>
+
+							<br />
+
+							<!-- Credential Fields [0] -->
+							<div class="row">
+								<div class="large-3 columns">
+									<h5>credentialFields[0]</h5>
+								</div>
+							</div>
+
+							<br />
+
+							<div class="row">
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">valueIdentifier</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[0].valueIdentifier" value="LOGIN1">
+								</div>
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">valueMask</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[0].valueMask" value="LOGIN_FIELD">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">fieldType.typeName</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[0].fieldType.typeName" value="IF_LOGIN">
+								</div>
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">size</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[0].size" value="20">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">value</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[0].value" value="admios_luis.site16441.1" placeholder="Username">
+								</div>
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">maxlength</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[0].maxlength" value="20">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">name</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[0].name" value="LOGIN1">
+								</div>
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">displayName</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[0].displayName" value="Catalog">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">isEditable</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[0].isEditable" value="true">
+								</div>
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">isOptional</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[0].isOptional" value="false">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">isEscaped</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[0].isEscaped" value="false">
+								</div>
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">helpText</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[0].helpText" value="150862">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">isOptionalMFA</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[0].isOptionalMFA" value="false">
+								</div>
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">isMFA</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[0].isMFA" value="false">
+								</div>
+							</div>
+
+							<br />
+
+
+							<!-- Credential Fields [1] -->
+							<div class="row">
+								<div class="large-4 columns">
+									<h5>credentialFields[1]</h5>
+								</div>
+							</div>
+
+							<br />
+
+							<div class="row">
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">valueIdentifier</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[1].valueIdentifier" value="PASSWORD1">
+								</div>
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">valueMask</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[1].valueMask" value="LOGIN_FIELD">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">fieldType.typeName</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[1].fieldType.typeName" value="IF_PASSWORD">
+								</div>
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">size</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[1].size" value="20">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">value</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="password" id="left-label" name="credentialFields[1].value" value="site16441.1" placeholder="Password">
+								</div>
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">maxlength</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[1].maxlength" value="40">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">name</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[1].name" value="PASSWORD1">
+								</div>
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">displayName</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[1].displayName" value="Password">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">isEditable</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[1].isEditable" value="true">
+								</div>
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">isOptional</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[1].isOptional" value="false">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">isEscaped</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[1].isEscaped" value="false">
+								</div>
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">helpText</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[1].helpText" value="150863">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">isOptionalMFA</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[1].isOptionalMFA" value="false">
+								</div>
+								<div class="large-3 columns">
+									<label for="left-label" class="left inline">isMFA</label>
+								</div>
+								<div class="large-3 columns">
+									<input type="text" id="left-label" name="credentialFields[1].isMFA" value="false">
+								</div>
+							</div>
+
+							<br />
+
+							<div class="row">
+								<div class="large-4 columns">
+									<h5>credentialFields</h5>
+								</div>
+							</div>
+
+
+							<div class="row">
+								<div class="large-4 columns">
+									<label for="left-label" class="left inline">enclosedType</label>
+								</div>
+								<div class="large-8 columns">
+									<input type="text" id="left-label" name="enclosed_type" value="com.yodlee.common.FieldInfoSingle">
+								</div>
+							</div>
+
+							<br />
+							<div class="row">
+								<div class="large-4 columns">
+									<button class="button tiny radius success" type="submit" name="siteaccount">Send Data</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<hr>
+				
+				<br />
+
+				<div class="row">
+					<div class="large-12 columns">
+						<h5>Response JSON</h5>
+							<textarea class="response_json" name="res_json">{{ res_json }}</textarea>
+					</div>
+				</div>
+			</div>
+
+			<!-- Nav Sidebar -->
+			<!-- This is source ordered to be pulled to the left on larger screens -->
+			<div class="large-3 pull-9 columns">
+				<ul class="side-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/cobrand-session-token">CoBrand Session Token</a></li>
+					<li><a href="/user-session-token">User Session Token</a></li>
+					<li><a href="/search-sites">Search Sites</a></li>
+					<li><a href="/site-login">Site Login Form</a></li>
+					<li class="active"><a href="/site-account">Site Account Management</a><li>
+					<li><a href="/item-summaries">Item Summaries</a></li>
+				</ul>
+			</div>
+		</div>
+	{% endblock %}
+</html>

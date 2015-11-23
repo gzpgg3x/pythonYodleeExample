@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://localhost:5000/cobrand-session-token -->
+<html class="no-js" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>SampleApp - Python</title>
+
+        <link rel="stylesheet" href="http://localhost:5000/static/css/foundation.css">
+        <link rel="stylesheet" href="http://localhost:5000/static/css/normalize.css">
+        <link rel="stylesheet" href="http://localhost:5000/static/css/app.css">
+
+        <script type="text/javascript" src="./SampleApp - Python_files/foundation.js"></script>
+		<script src="./SampleApp - Python_files/modernizr.js"></script>
+
+		<script src="./SampleApp - Python_files/jquery-1.11.0.min.js"></script>
+		<script src="./SampleApp - Python_files/jquery-migrate-1.2.1.min.js"></script>
+    </head>
+    
+    <body>
+    	
+		<!-- Header and Nav -->
+		<div class="row">
+			<div class="large-3 columns">
+				<h1><img src="./SampleApp - Python_files/logo-yodleeinteractive-transparent.png"></h1>
+			</div>
+		</div>
+		<!-- End Header and Nav -->
+
+		<!-- Main Content Section -->
+		<!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
+		<div class="row">
+			<div class="large-9 push-3 columns">
+				<h3>CoBrand Session Token</h3>
+
+				<br>
+				<br>
+
+				<form>
+					<div class="row">
+						<div class="large-12 columns">
+							<div class="row">
+								<div class="large-4 columns">
+									<label for="left-label" class="left inline">CoBrand Login</label>
+								</div>
+								<div class="large-8 columns">
+									<input type="text" id="left-label" name="cobrand_login" placeholder="Login">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="large-4 columns">
+									<label for="left-label" class="left inline">CoBrand Password</label>
+								</div>
+								<div class="large-8 columns">
+									<input type="password" id="left-label" name="cobrand_password" placeholder="Password">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="large-4 columns">
+									<button class="button tiny radius success">Get CobSession Token</button>
+								</div>
+								<div class="large-8 columns">
+									<input type="password" id="left-label" name="cobsession_token" placeholder="Token will generate here">
+								</div>
+							</div>
+
+							<br>
+
+							<hr>
+							
+							<br>
+
+							<div class="row">
+								<div class="large-12 columns">
+									<h5>Response JSON</h5>
+										<textarea class="response_json">{"cobrandId":10010352,"channelId":-1,"locale":"en_US","tncVersion":2,"applicationId":"3A4CAE9B71A1CCD7FF41F51006E9ED00","cobrandConversationCredentials":{"sessionToken":"08062013_0:336b47b522746e784ff8cb8b8b9333a30d696bc4db6e816bf786cc57495ab2ee29e488845e41afe94a268c60b5d4c4719352c3fda4f909e088030a5eb1653369"},"preferenceInfo":{"currencyCode":"USD","timeZone":"PST","dateFormat":"MM/dd/yyyy","currencyNotationType":{"currencyNotationType":"SYMBOL"},"numberFormat":{"decimalSeparator":".","groupingSeparator":",","groupPattern":"###,##0.##"}}}</textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<!-- Submenu toggle -->
+			<script>
+				$(document).ready(function() {
+					var details = $(".submenu");
+					$(details).hide();
+
+					$("#rest").click(function(e) {
+						$(details).toggle();
+						e.preventDefault();
+					});
+				});
+			</script>
+
+			<!-- Nav Sidebar -->
+			<!-- This is source ordered to be pulled to the left on larger screens -->
+			<div class="large-3 pull-9 columns">
+				<ul class="side-nav">
+					<li><a href="http://localhost:5000/">Home</a></li>
+					<li class="active"><a href="./SampleApp - Python_files/SampleApp - Python.htm">CoBrand Session Token</a></li>
+					<li><a href="http://localhost:5000/user-session-token">User Session Token</a></li>
+					<li><a id="rest">REST Service Implementation</a></li>
+					<!-- Collapsable menu for REST -->
+					<div class="submenu" style="display: none;">
+						<li><a href="http://localhost:5000/search-sites">Search Sites</a></li>
+						<li><a href="http://localhost:5000/site-login">Site Login Form</a></li>
+						<li><a href="http://localhost:5000/site-account">Site Account Management</a></li><li>
+						</li><li><a href="http://localhost:5000/item-summaries">Item Summaries</a></li>
+					</div>
+				</ul>
+			</div>
+		</div>
+	
+
+		<!-- Footer -->
+		<footer class="row">
+			<div class="large-12 columns">
+			<hr>
+				<div class="row">
+					<div class="large-6 columns">
+						<p>© Yodlee Interactive 2014</p>
+					</div>
+					
+					<div class="large-6 columns">
+						<ul class="inline-list right">
+							<li><a href="http://localhost:5000/cobrand-session-token#">Back to Top</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="./SampleApp - Python_files/jquery.js"></script>
+		<script src="./SampleApp - Python_files/foundation.min.js"></script>
+		<script>
+			$(document).foundation();
+		</script>
+    
+</body></html>

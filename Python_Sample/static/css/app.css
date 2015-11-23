@@ -1,0 +1,14 @@
+/* Extra styling & overrides */
+.submenu {
+  margin-left: 1.25rem;
+}
+
+.cobsession_token {
+  font: 14px/20px "Consolas", "Courier New", "Courier";
+  height: 80px;
+}
+
+.response_json {
+  font: 14px/20px "Consolas", "Courier New", "Courier";
+  height: 350px;
+}
